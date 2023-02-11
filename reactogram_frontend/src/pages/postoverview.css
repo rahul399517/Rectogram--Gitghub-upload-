@@ -1,0 +1,16 @@
+#postspace {
+  margin: 10px;
+}
+.container {
+  height: auto;
+}
+@media only screen and (max-width: 450px) {
+  #postspace {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+  }
+  .container {
+    box-shadow: none;
+  }
+}

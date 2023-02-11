@@ -1,0 +1,65 @@
+.container {
+  font-family: "Poppins", sans-serif;
+  margin-top: 2rem;
+}
+#loginformcard {
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.input-bg {
+  background-color: #f3f3f3;
+  color: #dbd5d5;
+  font-size: 0.9rem;
+  height: 2.9rem;
+}
+.custom-btn {
+  padding: 0.6rem;
+  border-radius: 4px;
+}
+.custom-btn-blue {
+  border: 1px solid #b3e0ff;
+  background-color: #b3e0ff;
+  color: white;
+}
+.custom-btn-white {
+  border: 1px solid #dee5e9;
+  background-color: #ffffff;
+  color: black;
+  padding: 10px;
+}
+.socialDesktop {
+  display: block;
+}
+.socialMobile {
+  display: none;
+}
+#cardbox {
+  padding: 40px;
+  padding-bottom: 1rem;
+}
+#contactusformcard {
+  height: 550px;
+}
+@media only screen and (max-width: 450px) {
+  .socialDesktop {
+    display: none;
+  }
+  .socialMobile {
+    display: block;
+  }
+  .container {
+    margin-top: 2rem;
+  }
+  #loginformcard {
+    border: none;
+    box-shadow: none;
+  }
+  #cardbox {
+    margin-left: 0.5;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .card {
+    width: 100%;
+  }
+}
