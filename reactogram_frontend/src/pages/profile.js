@@ -27,7 +27,7 @@ const Profile = () => {
   const CONFIG_OBJ = {
     headers: {
       "content-type": "application/json",
-      Authorization: "Bearer" + localStorage.getItem("token"),
+      Authorization: "Bearer " + localStorage.getItem("token"),
     },
   };
   //To hande the file select
