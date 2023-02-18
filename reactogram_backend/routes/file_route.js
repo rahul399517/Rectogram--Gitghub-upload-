@@ -2,20 +2,22 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const { route } = require("./user_route");
+const path = require("path");
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/");
+    cb(null, "uploads/"); //../upload is the file destination of the image we upload
   },
   filename: (req, file, cb) => {
+    console.log(file);
     cb(null, file.originalname);
   },
 });
 const upload = multer({
   storage: storage,
-  limits: { fileSize: 1024 * 1024 * 1 },
-  fileFilter: (req, res, cb) => {
+
+  fileFilter: (req, file, cb) => {
     if (
-      file.mimetype === "image/gif" ||
+      file.mimetype === "video/mp4" ||
       file.mimetype === "image/png" ||
       file.mimetype === "image/jpg" ||
       file.mimetype === "image/jpeg"
@@ -31,7 +33,7 @@ const upload = multer({
 });
 //upload image file functionality
 router.post("/uploadfile", upload.single("file"), function (req, res) {
-  res.json({ fileName: req.file.filename });
+  res.status(201).json({ fileName: req.file.filename });
 });
 //download functionality
 const downloadFile = (req, res) => {
