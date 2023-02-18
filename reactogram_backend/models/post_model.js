@@ -27,7 +27,7 @@ const postSchema = new mongoose.Schema({
   },
   author: {
     type: ObjectId,
-    Ref: "UserModel",
+    ref: "UserModel",
   },
 });
 const PostModel = mongoose.model("PostModel", postSchema);
