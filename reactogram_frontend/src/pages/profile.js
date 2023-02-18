@@ -80,7 +80,7 @@ const Profile = () => {
         CONFIG_OBJ
       );
       setLoading(false);
-      if (postResponse === 201) {
+      if (postResponse.status === 200) {
         navigate("/posts");
       } else {
         Swal.fire({
