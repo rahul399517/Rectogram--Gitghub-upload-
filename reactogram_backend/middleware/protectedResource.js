@@ -14,7 +14,7 @@ const protectedRoute = (module.exports = (req, res, next) => {
   const token = authorization.replace("Bearer ", "");
   jwt.verify(token, JWT_SECRET, (error, payload) => {
     if (error) {
-      return res.json(4010), json({ error: "User not loged in" });
+      return res.status(400).json({ error: "User not loged in" });
     }
     const { _id } = payload;
     UserModel.findById(_id).then((dbUser) => {
